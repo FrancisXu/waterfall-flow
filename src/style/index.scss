@@ -1,0 +1,22 @@
+@import "common/var";
+@import "common/function";
+
+$--lg: $break-md;
+$--color-primary: $color-primary;
+$--background-color-base: $background-color-medium;
+
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "../../node_modules/element-ui/packages/theme-chalk/src/index";
+
+@import "reset";
+@import "space";
+@import "font";
+@import "common/flex";
+@import "common/transtion";
+
+@import "plugins/card";
+@import "plugins/filter";
+@import "plugins/table";
+@import "plugins/button";
+@import "plugins/input";

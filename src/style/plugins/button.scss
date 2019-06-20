@@ -1,0 +1,21 @@
+//@import "../common/function";
+
+.el-button {
+	@include font-size-medium;
+	@media (max-width: $break-md) {
+		padding: $space-small $space-medium;
+	}
+}
+
+.el-radio-button {
+	.el-radio-button__inner {
+		@include font-size-medium;
+		&:focus {
+			box-shadow: unset;
+			border: none;
+		}
+	}
+	&:focus:not(.is-focus):not(:active):not(.is-disabled) {
+		box-shadow: none;
+	}
+}
