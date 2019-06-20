@@ -52,6 +52,7 @@
                     {url: "image6.jpg"},
                     {url: "image7.jpg"},
                     {url: "image8.jpg"},
+                    {url: "image3.jpg"},
                 ];
                 this.pushImage(0);
             },
