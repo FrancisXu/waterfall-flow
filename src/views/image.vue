@@ -17,7 +17,6 @@
     </div>
 </template>
 <script>
-    let imageURL = 'https://francisxu.github.io/waterfall-flow/images/';
 
     export default {
         data() {
@@ -29,7 +28,7 @@
                 footerVisible: false,
                 pagination: {
                     currentPage: 1,
-                    totalPage: 100,
+                    totalPage: 10,
                     pageSize: 10,
                     available: true,
                 }
@@ -60,7 +59,7 @@
             pushImage(index) {
                 if (index >= this.tempImage.length) return;
                 let img = new Image(), that = this;
-                img.src = imageURL + that.tempImage[index].url;
+                img.src = "https://francisxu.github.io/waterfall-flow/images/" + that.tempImage[index].url;
                 img.onload = () => {
                     let min = that.imageHeight[0], imageIndex = 0;
                     that.imageHeight.forEach(function (item, _index) {
