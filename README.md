@@ -1,32 +1,7 @@
-# client
+# vue实现瀑布流图片显示
 
-## Project setup
-```
-npm install
-```
+## DEMO
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+https://francisxu.github.io/waterfall-flow/
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-"# web-client" 
