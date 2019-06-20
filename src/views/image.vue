@@ -3,7 +3,8 @@
         <div class="waterfall">
             <div class="column" v-for="item in imageList">
                 <div class="column-item" v-for="(image,index) in item">
-                    <img class="img" :src="'../../src/assets/images/'+image.url" alt="">
+                    <img class="img" :src="'https://francisxu.github.io/waterfall-flow/images/'+image.url"
+                         alt="">
                     <p class="date">20 nov, 2016</p>
                     <h5 class="title">Auto-resized image</h5>
                     <h6 class="content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </h6>
@@ -16,9 +17,8 @@
     </div>
 </template>
 <script>
-    let imageURL = process.env.VUE_APP_ENV === "dev"
-        ? "http://localhost:8081/img/" :
-        "https://www.francisxu.com/images/"
+    let imageURL = 'https://francisxu.github.io/waterfall-flow/images/';
+
     export default {
         data() {
             return {
@@ -29,7 +29,7 @@
                 footerVisible: false,
                 pagination: {
                     currentPage: 1,
-                    totalPage: 1,
+                    totalPage: 100,
                     pageSize: 10,
                     available: true,
                 }
@@ -48,9 +48,12 @@
                     {url: "image1.jpg"},
                     {url: "image2.jpg"},
                     {url: "image3.jpg"},
+                    {url: "image4.jpg"},
+                    {url: "image5.jpg"},
+                    {url: "image6.jpg"},
+                    {url: "image7.jpg"},
+                    {url: "image8.jpg"},
                 ];
-                // this.pagination.totalPage = Math.ceil(result.data.totalCount / that.pagination.pageSize);
-                // this.pagination.currentPage = result.data.currentPage;
                 this.pushImage(0);
             },
 
@@ -58,7 +61,6 @@
                 if (index >= this.tempImage.length) return;
                 let img = new Image(), that = this;
                 img.src = imageURL + that.tempImage[index].url;
-                console.log(img.src);
                 img.onload = () => {
                     let min = that.imageHeight[0], imageIndex = 0;
                     that.imageHeight.forEach(function (item, _index) {
