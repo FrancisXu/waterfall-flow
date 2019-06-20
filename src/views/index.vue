@@ -106,6 +106,7 @@
 </script>
 <style lang="scss" scoped>
     @import "../style/common/var";
+    @import "../style/index";
 
     .image {
         padding-top: $header-height;
